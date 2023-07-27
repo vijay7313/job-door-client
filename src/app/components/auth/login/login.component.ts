@@ -46,7 +46,7 @@ console.log("1")
         if (response.token != null)
         {
           const tokenInfo = this.getDecodedAccessToken(response.token);
-          console.log(tokenInfo.role)
+          // console.log(tokenInfo.role)
           localStorage.setItem("Authorization", "");
           localStorage.setItem("Authorization", "Bearer " + response.token);
 
