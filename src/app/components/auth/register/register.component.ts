@@ -4,6 +4,7 @@ import { Router } from '@angular/router'
 import { ToastrService } from 'ngx-toastr'
 import { User } from 'src/app/model/UserModel'
 import { RegisterService } from 'src/app/service/register.service'
+import { UserNameCheckService } from 'src/app/service/user-name-check.service'
 
 @Component({
   selector: 'app-register',
@@ -59,6 +60,7 @@ export class RegisterComponent {
     private router: Router,
     private registerService: RegisterService,
     private toastr: ToastrService,
+    private userNameCheckService:UserNameCheckService
   ) {}
   ngOnInit() {
     this.personalDetails = this.formBuilder.group({
@@ -173,7 +175,7 @@ export class RegisterComponent {
     if (value) {
       this.user.userName = value.userName
       this.usernameAvailable = null
-      this.registerService.checkUsernameAvailability(this.user).subscribe(
+      this.userNameCheckService.checkUsernameAvailability(this.user).subscribe(
         (response) => {
           this.usernameAvailable = response
           this.showResult = true

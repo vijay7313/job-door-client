@@ -1,10 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
-/* .bg-img{
- background-image: url('/assets/magnifyinglens.jpg'); background-size: cover;
+
+.bg-img {
+  background-image: url('/assets/magnifyinglens.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-} */
+  height: 97vh; /* Set the height to cover the entire viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .login-page {
   width: 360px;
@@ -13,6 +24,7 @@
 
 }
 .form {
+  box-sizing: border-box;
   position: relative;
   z-index: 1;
   background: #FFFFFF;
@@ -21,6 +33,7 @@
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  opacity: 88%;
 }
 .form input {
   font-family: "Roboto", sans-serif;
@@ -95,18 +108,26 @@
 .container .info span .fa {
   color: #EF3B3A;
 }
-body {
+/* body {
   background: #76b852;
   background: rgb(141,194,111);
   background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 
 .error{
   color:red;
   position: relative;
   bottom: 15px;
+}
+
+
+.userNameAvailable{
+  color:red;
+  position: relative;
+  bottom: 25px;
+  right: 28%;
 }

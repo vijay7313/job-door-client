@@ -16,7 +16,4 @@ export class RegisterService {
     return this.http.post(environment.apiurl + `/createUser`, user);
   }
 
-  checkUsernameAvailability(username: User): Observable<any> {
-    return this.http.post(environment.apiurl + `/checkUserNameAvailability`, username );
-  }
 }

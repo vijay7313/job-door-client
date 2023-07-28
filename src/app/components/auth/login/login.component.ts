@@ -35,7 +35,6 @@ export class LoginComponent {
   login() {
 
     this.submitDisabled = true;
-console.log("1")
     if (this.loginForm.valid) {
       const val = this.loginForm.value;
       this.user.userName = val.userName;
@@ -43,11 +42,9 @@ console.log("1")
 
       this.loginService.login(this.user).subscribe((response: any) =>
       {
-        console.log(response)
         if (response.token != null)
         {
           const tokenInfo = this.getDecodedAccessToken(response.token);
-          // console.log(tokenInfo.role)
           localStorage.setItem("Authorization", "");
           localStorage.setItem("Authorization", "Bearer " + response.token);
 
