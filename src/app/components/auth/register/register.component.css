@@ -241,11 +241,22 @@ fieldset {
   -o-transition: All 0.5s ease-in;
 }
 
-/* Error message style for role field */
 #error-role {
   color: red;
   font-size: 12px;
   margin-top: 5px;
 }
 
-/* ... rest of the styles ... */
+.userNameAvailable{
+  color:green;
+  position: relative;
+  bottom: 25px;
+  right: 42%;
+}
+
+.userNameNotAvailable{
+  color: red;
+  position: relative;
+  bottom: 25px;
+  right: 40.5%;
+}

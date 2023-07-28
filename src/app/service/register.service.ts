@@ -11,12 +11,12 @@ export class RegisterService {
 
   constructor(private http: HttpClient) { }
 
-  checkUserNameAvailability(user: User): Observable<any> {
-    return this.http.post(environment.apiurl + `/checkUserNameAvailability`,user);
-  }
   register(user: User): Observable<any>
   {
-    console.log(user)
     return this.http.post(environment.apiurl + `/createUser`, user);
+  }
+
+  checkUsernameAvailability(username: User): Observable<any> {
+    return this.http.post(environment.apiurl + `/checkUserNameAvailability`, username );
   }
 }

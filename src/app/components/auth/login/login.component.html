@@ -1,9 +1,19 @@
+
 <div class="login-page">
 
   <div class="form">
     <form  [formGroup]="loginForm">
-      <input type="email"  formControlName="userName" placeholder="Username" required>
-      <input type="password"   formControlName="password" minlength="6" placeholder="Password" required>
+      <div> <input type="email"  formControlName="userName" placeholder="Username" required>
+        <div *ngIf="submitDisabled && loginForm.controls.userName.errors">
+          <div *ngIf="loginForm.controls.userName.errors.required" class="error">Please enter your user name.</div>
+      </div>
+      </div>
+<div>
+  <input type="password"   formControlName="password" minlength="6" placeholder="Password" required>
+  <div *ngIf="submitDisabled && loginForm.controls.password.errors">
+    <div *ngIf="loginForm.controls.password.errors.required" class="error">Please enter your password.</div>
+  </div>
+</div>
 
       <button  type="submit" (click)="login()">Login</button>
       <p class="message">Not registered? <a href="#" routerLink="/register" >Create an account</a></p>

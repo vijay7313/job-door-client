@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+/* .bg-img{
+ background-image: url('/assets/magnifyinglens.jpg'); background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
 .login-page {
   width: 360px;
   padding: 8% 0 0;
@@ -90,10 +96,17 @@
   color: #EF3B3A;
 }
 body {
-  background: #76b852; /* fallback for old browsers */
+  background: #76b852;
   background: rgb(141,194,111);
   background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+.error{
+  color:red;
+  position: relative;
+  bottom: 15px;
 }

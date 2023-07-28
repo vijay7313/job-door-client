@@ -12,6 +12,7 @@ import jwt_decode from 'jwt-decode';
 })
 export class LoginComponent {
   loginForm: any;
+  submitDisabled: boolean = false;
   user: Auth = {
     userName: '',
     password: ''
@@ -33,7 +34,7 @@ export class LoginComponent {
   }
   login() {
 
-    // this.submitDisabled = true;
+    this.submitDisabled = true;
 console.log("1")
     if (this.loginForm.valid) {
       const val = this.loginForm.value;
@@ -50,7 +51,7 @@ console.log("1")
           localStorage.setItem("Authorization", "");
           localStorage.setItem("Authorization", "Bearer " + response.token);
 
-          // this.router.navigateByUrl("/landingPage");
+          this.router.navigateByUrl("/landingPage");
           }
        }
        );
